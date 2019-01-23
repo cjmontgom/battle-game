@@ -6,7 +6,9 @@ feature 'Testing infrastructure' do
   end
   scenario 'Can post player names' do
     visit('/')
-    fill_in('Player 1 :', with:'name')
-    fill_in('Player 2 :', with:'name')
+    fill_in('player1', with: 'name1')
+    fill_in('player2', with: 'name2')
+    click_button('Submit!')
+    expect(page).to have_content 'name1 vs. name2'
   end
 end
