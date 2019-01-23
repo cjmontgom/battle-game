@@ -28,6 +28,7 @@ class Battle < Sinatra::Base
   get '/notify_attack' do
     @player1 = $player1
     @player2 = $player2
+    @player2.attacked
     erb :notify_attack
   end
 

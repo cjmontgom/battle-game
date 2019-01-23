@@ -13,7 +13,7 @@ feature 'Testing infrastructure' do
 
   scenario 'Displays the player\'s points' do
     sign_in_and_play
-    expect(page).to have_content 'name2\'s hit points:'
+    expect(page).to have_content 'name2\'s hit points: 100'
   end
 
   scenario 'Player one can attack player two and receive confirmation' do
@@ -21,4 +21,12 @@ feature 'Testing infrastructure' do
     click_button('Attack name2')
     expect(page).to have_content 'NAME1 HAS ATTACKED NAME2!'
   end
+
+  scenario 'Attacks should reduce a player\'s hit points by 10' do
+    sign_in_and_play
+    click_button('Attack name2')
+    click_button('Ok')
+    expect(page).to have_content 'name2\'s hit points: 90'
+  end
+
 end

@@ -1,5 +1,5 @@
 <h1><%="#{@player1.name} vs. #{@player2.name}"%></h1>
-<h2><%="#{@player2.name}'s hit points:"%></h2>
+<h2><%="#{@player2.name}'s hit points: #{@player2.hp}"%></h2>
 
 <form action="/attacked" method="post">
   <input type="submit" value="Attack <%="#{@player2.name}"%>" >
