@@ -6,6 +6,10 @@ class Player
     @hp = hp
   end
 
+  def attack(player)
+    player.attacked
+  end
+
   def attacked
     @hp -= 10
   end
