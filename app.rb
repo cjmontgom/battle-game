@@ -20,4 +20,14 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  post '/attacked' do
+    redirect '/notify_attack'
+  end
+
+  get '/notify_attack' do
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    erb :notify_attack
+  end
+
 end
