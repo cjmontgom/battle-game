@@ -11,4 +11,12 @@ feature 'Testing infrastructure' do
     click_button('Submit!')
     expect(page).to have_content 'name1 vs. name2'
   end
+  scenario 'Displays the player\'s points' do
+    visit('/')
+    fill_in('player1', with: 'name1')
+    fill_in('player2', with: 'name2')
+    click_button('Submit!')
+    expect(page).to have_content 'name2\'s hit points:'
+
+  end
 end
