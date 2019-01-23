@@ -1,18 +1,10 @@
 require 'sinatra/base'
-# require 'capybara'
-# require 'capybara/rspec'
-# require 'rspec'
 
 class Battle < Sinatra::Base
   # set :sessions, true
-  # set :foo, 'bar'
 
   get '/' do
-    'Testing infrastructure working!'
-  end
-
-  get '/start_fight' do
-    erb :start_a_fight
+      erb :start_a_fight
   end
 
   post '/fight' do
