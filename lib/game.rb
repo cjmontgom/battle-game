@@ -16,4 +16,8 @@ attr_reader :player1, :player2, :players
     @players.rotate!
   end
 
+  def dead?
+    players.last.hp == 0
+  end
+
 end

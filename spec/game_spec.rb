@@ -29,4 +29,12 @@ describe Game do
     end
   end
 
+  describe '#dead?' do
+    let(:player1) { double(:player, hp: 0) }
+    it 'should allow player1 to die' do
+      game = Game.new(player1, player1)
+    expect(game).to be_dead
+  end
+end
+
 end

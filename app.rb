@@ -28,7 +28,15 @@ class Battle < Sinatra::Base
   get '/notify_attack' do
     @game = $game
     $game.attack(@game.players.last)
+    if $game.dead?
+      redirect '/game-over'
+    else
     erb :notify_attack
+    end
+  end
+
+  get '/game-over' do
+    erb :game_over
   end
 
   post '/switch' do

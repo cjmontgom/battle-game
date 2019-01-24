@@ -31,11 +31,23 @@ feature 'Testing infrastructure' do
 
   scenario 'You can switch players' do
     sign_in_and_play
-    click_button('Attack name2')
-    click_button('Ok')
+    attack_and_click
     click_button('Switch attacker')
     click_button('Ok')
     find_button('Attack name1').click
   end
 
+  scenario 'Shows Game Over Screen when player hp reaches 0' do
+    sign_in_and_play
+    9.times { attack_and_click }
+    click_button('Attack name2')
+    expect(page).to have_content "Game Over"
+  end
+
+  scenario 'Shows player has lost' do
+    sign_in_and_play
+    9.times { attack_and_click }
+    click_button('Attack name2')
+    expect(page).to have_content "name2 has lost :("
+  end
 end
