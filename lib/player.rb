@@ -11,7 +11,7 @@ class Player
   end
 
   def attacked
-    @hp -= 10
+    @hp -= rand(10..20)
   end
 
 end

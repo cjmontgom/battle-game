@@ -1,5 +1,9 @@
-<h1><%="#{@game.players.first.name.upcase} HAS ATTACKED #{@game.players.last.name.upcase}!"%></h1>
+<link rel="stylesheet"type="text/css"href="/style.css"/>
 
-<form action='/play' method='get'>
-  <input type='submit' value='Ok'>
-</form>
+<div align=center>
+  <h1><%="#{@game.players.first.name.upcase} HAS ATTACKED #{@game.players.last.name.upcase}!"%></h1>
+
+  <form action='/play' method='get'>
+    <input type='submit' value='Ok'>
+  </form>
+</div>

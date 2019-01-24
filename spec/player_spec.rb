@@ -20,8 +20,9 @@ describe Player do
   describe '#attacked' do
 
     it 'should reduce the hitpoints by 10' do
+      srand(10)
       subject.attacked
-      expect(subject.hp).to eq 90
+      expect(subject.hp).to eq 81
     end
   end
 

@@ -6,6 +6,7 @@ def sign_in_and_play
 end
 
 def attack_and_click
+  srand(10)
   click_button('Attack name2')
   click_button('Ok')
 end

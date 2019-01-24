@@ -1,0 +1,28 @@
+div {
+  margin-top: 200px
+}
+
+body {
+  color: white;
+  font-family: monospace;
+  font-weight: 400;
+  background-color: black;
+}
+
+form {
+  font-family: monospace;
+  font-size: 50px;
+}
+
+form.plays {
+  margin-top: 50px;
+  font-family: monospace;
+}
+
+input, input[type="submit"] {
+  font-family: monospace;
+  border: none;
+  margin: 10px;
+  width: 25%;
+  font-size: 30px;
+}
