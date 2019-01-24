@@ -1,4 +1,4 @@
-<h1><%="#{@game.player1.name.upcase} HAS ATTACKED #{@game.player2.name.upcase}!"%></h1>
+<h1><%="#{@game.players.first.name.upcase} HAS ATTACKED #{@game.players.last.name.upcase}!"%></h1>
 
 <form action='/play' method='get'>
   <input type='submit' value='Ok'>

@@ -29,4 +29,13 @@ feature 'Testing infrastructure' do
     expect(page).to have_content 'name2\'s hit points: 90'
   end
 
+  scenario 'You can switch players' do
+    sign_in_and_play
+    click_button('Attack name2')
+    click_button('Ok')
+    click_button('Switch attacker')
+    click_button('Ok')
+    find_button('Attack name1').click
+  end
+
 end

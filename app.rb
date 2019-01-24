@@ -27,8 +27,14 @@ class Battle < Sinatra::Base
 
   get '/notify_attack' do
     @game = $game
-    $game.attack(@game.player2)
+    $game.attack(@game.players.last)
     erb :notify_attack
+  end
+
+  post '/switch' do
+    @game = $game
+    @game.switch_attacker
+    erb:switch
   end
 
 end

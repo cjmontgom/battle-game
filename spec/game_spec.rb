@@ -21,4 +21,12 @@ describe Game do
     end
   end
 
+  describe '#switch_attacker' do
+
+    it 'should switch the current attacker' do
+      subject.switch_attacker
+      expect(subject.players.first).to eq 'Barry'
+    end
+  end
+
 end
